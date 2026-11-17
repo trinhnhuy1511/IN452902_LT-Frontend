@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Danh sách các sự kiện sắp diễn ra tại EduHub Web">
+    <title>EduHub Web - Danh sách sự kiện</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Thanh đầu trang -->
+    <header>
+        <div class="logo">EduHub Web</div>
+        <nav class="menu" aria-label="Điều hướng chính">
+            <a href="#">Trang chủ</a>
+            <a href="#">Sự kiện</a>
+            <a href="#">Đăng ký</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Sự kiện sắp diễn ra</h2>
+
+        <!-- Tìm kiếm theo từ khóa -->
+        <form id="search-form" role="search">
+            <label for="keyword">Tìm sự kiện</label>
+            <input id="keyword" type="search" placeholder="Tìm sự kiện..." autocomplete="off">
+            <button type="submit">Tìm</button>
+        </form>
+
+        <!-- Trạng thái: đang tải / số kết quả / lỗi -->
+        <p id="status" role="status" aria-live="polite"></p>
+
+        <!-- Danh sách card, JavaScript sẽ thay nội dung khi tải xong -->
+        <div id="event-list">
+            <article class="event-card">
+                <img alt="Workshop Git & GitHub cho tân sinh viên" src="img/event.svg">
+                <a href="event-detail.html?id=1">Workshop Git & GitHub cho tân sinh viên</a>
+                <time datetime="2026-09-12T08:00">12/09/2026 08:00</time>
+                <p>Phòng máy A3.201</p>
+                <p>Còn 12/40 chỗ</p>
+            </article>
+
+            <article class="event-card">
+                <span class="badge-full">Hết chỗ</span>
+                <img alt="Hackathon EduHub 24 giờ" src="img/event.svg">
+                <a href="event-detail.html?id=2">Hackathon EduHub 24 giờ</a>
+                <time datetime="2026-12-19T08:00">19/12/2026 08:00</time>
+                <p>Phòng máy A3.205</p>
+                <p>[Hết chỗ]</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 EduHub Web</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
